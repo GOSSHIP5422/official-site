@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+/*
+  Page Feed
+-----------------------------------------------------*/
+.c-pageFeed {
+  padding: 1rem 5%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.c-pageFeed--prev,
+.c-pageFeed--next {
+  position: relative;
+}
+
+.c-pageFeed--prev {
+  margin-left: 1.5rem;
+}
+
+.c-pageFeed--next {
+  margin-right: 1.5rem;
+}
+
+.c-pageFeed--prev a,
+.c-pageFeed--next a {
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.c-pageFeed--prev::before,
+.c-pageFeed--prev::after,
+.c-pageFeed--next::before,
+.c-pageFeed--next::after {
+  position: absolute;
+  content: '';
+  width: .5rem;
+  height: .5rem;
+  top: .68rem;
+  transform: rotate(45deg);
+}
+
+.c-pageFeed--prev::before {
+  background-color: #fff;
+  left: -1rem;
+}
+
+.c-pageFeed--prev::after {
+  background-color: $sub-color;
+  left: -.8rem;
+}
+
+.c-pageFeed--next::before {
+  background-color: #fff;
+  right: -1rem;
+}
+
+.c-pageFeed--next::after {
+  background-color: $sub-color;
+  right: -.8rem;
+}
+
+.c-pageFeed--prev a:hover,
+.c-pageFeed--next a:hover{
+  color: $main-color;
+}

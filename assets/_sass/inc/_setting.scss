@@ -1,0 +1,102 @@
+@charset 'UTF-8';
+
+// -----------------------------------
+//  Layout Settings
+//------------------------------------
+
+// Contentの幅
+$content-width: 1200px !default;
+
+// ブレークポイント
+$breakpoints: (
+  'sp': 480px,
+  'tab': 768px,
+  'lap': 1024px,
+  'desk': 1200px,
+  'vr': 1024px
+) !default;
+
+//====================================
+//  Color Setings
+//====================================
+
+// ベースカラー
+$base-color: #FFF9EF;
+
+// メインカラー
+$main-color: #E66831;
+
+// サブカラー
+$sub-color: #1F1D1D;
+
+// サブカラー2
+$sub-color-2: #33312F;
+
+// テキストの色
+$primary-text-color: #1F1D1D;
+
+// // 補足などの色
+// $hint-text-color: $md-blue-grey-300;
+
+// // リンクカラー
+// $link-text-color: $md-cyan-500;
+
+// // ロールオーバーーカラー
+// $hover-text-color: $md-cyan-300;
+
+//====================================
+//  Typeface
+//====================================
+
+//$font-set-primary : set-font-family(1) !default;
+$font-set-primary: 'Lato', 'Noto Sans JP', '游ゴシック' , 'Yu Gothic' , '游ゴシック体' , 'YuGothic' , 'ヒラギノ角ゴ Pro W3' , 'Hiragino Kaku Gothic Pro' , 'Meiryo UI' , 'メイリオ' , Meiryo , sans-serif;
+
+// 1 : Roboto, Noto sans
+// 2 : Quicksand, 游ゴシック
+// 3 : Open Sans, Noto sans
+// 4 : Lato, Noto sans
+// 5 : Roboto, 游ゴシック
+// 6 : Quicksand, Noto sans
+// 7 : Noto Sans
+
+$base-font-size: 14px;
+
+//====================================
+//  ScrollTrigger Setings
+//====================================
+.invisible {
+  transition: opacity 2s ease;
+  opacity: 0.0;
+}
+
+.visible {
+  transition: opacity 2s ease;
+  opacity: 1.0;
+}
+
+.invisible.translateY {
+  transform: translateY(100px);
+  transition: all 1s ease;
+ }
+.visible.translateY {
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+
+.invisible.translateX--right {
+  transform: translateX(90%);
+  transition: all 1s ease;
+ }
+.visible.translateX--right {
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.invisible.translateX--left {
+  transform: translateX(-90%);
+  transition: all .5s ease;
+ }
+.visible.translateX--left {
+  transform: translateX(0);
+  transition: all .5s ease;
+}

@@ -1,0 +1,179 @@
+@charset 'UTF-8';
+
+/*Live Archaives*/
+.p-archives {
+
+  input[name="tab_item"] {
+    display: none;
+  }
+  .p-archives--tabs{
+    margin-top:1rem;
+    position:relative;
+    cursor: pointer;
+
+    .p-archives--tabButtons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .p-archives--tabButtons label{
+      cursor:pointer;
+      border-bottom:2px solid #ddd;
+      display:block;
+      width:calc(100% / 5 );
+      float:left;
+      text-align:center;
+      height:40px;
+      line-height:40px;
+      cursor: pointer;
+    }
+  }
+
+
+.p-archives--tabContent {
+  padding: 5px;
+  background-color: $sub-color-2;
+  display: block;
+
+  .p-archives--itemWrap {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(tab) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .p-tabContent {
+      flex: 0 0 50%;
+      padding: 1rem;
+
+      @include mq(tab) {
+        padding: 2rem;
+      }
+
+      &--img {
+        display: block;
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+
+        @include mq(lap) {
+          height: 320px;
+        }
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &--title {
+        font-size: 2rem;
+        line-height: 1.5rem;
+        margin-bottom: -.5rem;
+      }
+
+      &--day {
+        display: block;
+        text-align: right;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+.p-tabContent {
+  position: relative;
+  &--more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    color: $main-color;
+    padding: .75rem 1.75rem .75rem 1rem;
+    z-index: 1;
+    line-height: 1;
+  }
+
+  &--more::before,
+  &--more::after {
+    content: '';
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -.25rem;
+  }
+
+  &--more:before {
+    background-color: $main-color;
+    right: .6rem;
+  }
+
+  &--more:after {
+    background-color: #fff;
+    right: .75rem;
+  }
+}
+
+.p-tabContent:hover {
+  opacity: .6;
+}
+}
+
+#lamp{
+  width:20%;
+  height:2px;
+  background:$main-color;
+  display:block;
+  position:absolute;
+  top:38px;
+  transition: all .2s ease-in;
+}
+#lamp.content1{
+  left:0;
+}
+#lamp.content2{
+  left:20%;
+}
+#lamp.content3{
+  left:40%;
+}
+#lamp.content4{
+  left:60%;
+}
+#lamp.content5{
+  left:80%;
+}
+#lamp.content6{
+  top: 78px;
+  left:0%;
+}
+#lamp.content7{
+  top: 78px;
+  left:20%;
+}
+#lamp.content8{
+  top: 78px;
+  left:40%;
+}
+#lamp.content9{
+  top: 78px;
+  left:60%;
+}
+#lamp.content10{
+  top: 78px;
+  left:80%;
+}
+#lamp.content11{
+  top: 118px;
+  left:0%;
+}
+#lamp.content12{
+  top: 118px;
+  left:20%;
+}

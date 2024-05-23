@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+.p-live {
+  position: relative;
+  background: linear-gradient(90deg,$sub-color 0%,$sub-color 95%,$base-color 95%,$base-color 100%);
+  padding-top: 4rem;
+  color: #fff;
+  overflow: hidden;
+
+  .p-live--right {
+    margin-left: 15%;
+    position: relative;
+  }
+
+  .p-live--left {
+    padding-top: 2rem;
+    padding-left: 5%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+  }
+
+  @include mq (lap) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .p-live--right {
+      flex: 0 1 66.66666%;
+      width: 66.66666%;
+      margin-left: 5rem;
+
+      .p-live--img {
+        width: 100%;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .p-live--left {
+      flex: 0 1 33.33333%;
+      width: 33.33333%;
+      padding-left: 5vw;
+      padding-right: 0;
+      padding-top: 30vw;
+    }
+  }
+}
+
+.p-live .c-heading {
+  font-size: 6rem;
+  font-weight: 600;
+  transform: rotate(90deg);
+  position: absolute;
+  top: -.73rem;
+  left: -7.5rem;
+  z-index: 2;
+
+  @include mq(tab) {
+    font-size: 8rem;
+  }
+}

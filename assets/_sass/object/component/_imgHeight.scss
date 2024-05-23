@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+// -----------------------------------
+//  Image height
+//------------------------------------
+.c-imgHeight {
+  height: 60vw;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+    height: 60vw;
+    object-fit: cover;
+  }
+
+  @include mq(tab) {
+    height: 40vw;
+
+    img {
+      height: 40vw;
+    }
+  }
+}

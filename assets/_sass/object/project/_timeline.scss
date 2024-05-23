@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+/*
+  Timeline
+-----------------------------------------------------*/
+.p-timeline {
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+
+  .p-timeline--title {
+    display:inline-block;
+    background-color: $sub-color;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem 3rem;
+  }
+
+  @include mq(tab) {
+    .c-flex--container {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  .p-twitterTm {
+    margin-top: 1rem;
+    width: 60%;
+    height: 300px;
+    border: 1px solid $sub-color;
+  }
+
+  .p-timeline--sns {
+    margin-top: 1rem;
+    padding: 160px 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    line-height: 2.5;
+
+    @include mq(tab) {
+      padding-top: 140px;
+    }
+
+    .p-sns {
+      margin-top: 2rem;
+      color: $sub-color;
+      font-size: .75rem;
+    }
+
+    .p-sns:hover {
+      opacity: .7;
+    }
+
+    .--twitter,
+    .--instagram,
+    .--facebook,
+    .--youtube {
+      position: relative;
+    }
+
+    .--twitter::after,
+    .--instagram::after,
+    .--facebook::after,
+    .--youtube::after{
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+      position: absolute;
+      top: -.5rem;
+      right: -1.8rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .--twitter::after {
+      background: url(/assets/images/Twitter_Logo_or.png) no-repeat;
+      background-size: contain;
+    }
+
+    .--instagram::after {
+      background: url(/assets/images/IG_Logo_or.png) no-repeat;
+      background-size: contain;
+    }
+
+    .--facebook::after {
+      background: url(/assets/images/FB_Logo_or.png) no-repeat;
+      background-size: contain;
+    }
+
+    .--youtube::after {
+      background: url(/assets/images/YT_Logo_or.png) no-repeat;
+      background-size: contain;
+    }
+  }
+}

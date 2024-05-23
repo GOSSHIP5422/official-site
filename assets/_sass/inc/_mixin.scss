@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+//  Media Queries
+//--------------------------------------------
+@mixin mq($breakpoint, $type: min) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if($type == max) {
+      $width: map-get($breakpoints, $breakpoint);
+      $width: $width - 1;
+      @media screen and (max-width: #{$width}) {
+        @content;
+      }
+    }@else if($type == min) {
+      @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+  }
+}
+
+// //  Animation
+// //--------------------------------------------
+// @mixin keyframes($animation-name) {
+//   @-webkit-keyframes $animation-name {
+//     @content;
+//   }
+//   @-moz-keyframes $animation-name {
+//     @content;
+//   }
+//   @keyframes $animation-name {
+//     @content;
+//   }
+// }
+
+// @mixin animation($animation-name) {
+//   -webkit-animation: $animation-name;
+//   -moz-animation: $animation-name;
+//   animation: $animation-name;
+//   -webkit-animation-fill-mode: both;
+//   -moz-animation-fill-mode: both;
+//   animation-fill-mode: both;
+// }

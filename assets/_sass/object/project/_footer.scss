@@ -1,0 +1,82 @@
+@charset 'UTF-8';
+/*
+  Footer
+-----------------------------------------------------*/
+.p-footer {
+  text-align: center;
+}
+
+.p-footer--nav {
+  background-color: $base-color;
+
+  &--inner {
+    @include mq(tab) {
+      display: flex;
+      padding: 0 15%;
+      justify-content: space-between;
+      border-top: 1px solid $main-color;
+
+      li {
+        width: calc(100% / 5 );
+      }
+    }
+  }
+
+  .--link {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid $main-color;
+    color: $main-color;
+
+    @include mq(tab) {
+      border-top: none;
+    }
+
+    &:hover {
+      color: $sub-color-2;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  &.--dark {
+    background-color: $sub-color;
+
+    .p-footer--nav--inner {
+      @include mq(tab) {
+        border-top: 1px solid #fff;
+      }
+    }
+
+    .--link {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .--link:hover {
+      color:$sub-color;
+    }
+  }
+}
+
+.p-footer--adress {
+  background-color: $main-color;
+  padding: 1rem 0 0;
+
+  .p-footer--logo {
+    width: 150px;
+  }
+
+  .p-footer--copyright {
+    padding-top: .5rem;
+    padding-left: 1rem;
+  }
+
+  .p-footer--copyright small,
+  .p-footer--copyright a {
+    color: $base-color;
+    font-size: .75rem;
+    opacity: .8;
+  }
+}

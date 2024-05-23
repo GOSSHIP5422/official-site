@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+/*
+  Global Nav
+-----------------------------------------------------*/
+.p-gnav--menu{
+  background-color: $main-color;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin-top: -48px;
+  padding-top: 60px;
+  align-items:center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  display: none;
+
+  @include mq (tab) {
+    display: block;
+    background-color: inherit;
+    float: left;
+    position: static;
+    margin: 0;
+    padding: 1.5rem 0;
+  }
+
+  .p-gnav--menuItem{
+    margin: 2.5rem 0;
+
+    @include mq(tab) {
+      margin: 0;
+      display: inline-block;
+    }
+
+    a{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 2rem;
+
+      @include mq(tab) {
+        padding: 0;
+        padding: 0 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    a:hover{
+      color: $main-color;
+    }
+  }
+}
+
+.js-header-color {
+  .p-gnav--menuItem a:hover {
+    color: $sub-color;
+  }
+}

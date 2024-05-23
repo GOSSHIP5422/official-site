@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*
+  live_announce
+-----------------------------------------------------*/
+.p-announce {
+   text-align: center;
+   margin-top: 5rem;
+
+  .l-container {
+    margin-top: 1rem;
+  }
+
+  &--heading {
+    font-size: 1.25rem;
+  }
+
+  &--title {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+  }
+
+  &--info {
+    overflow: hidden;
+    text-align: center;
+
+  }
+}

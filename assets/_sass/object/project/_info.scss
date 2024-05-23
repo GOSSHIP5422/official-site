@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+/*
+  Info
+-----------------------------------------------------*/
+.p-info {
+  width: 85%;
+  max-width: 500px;
+  transform: translateY(-40%);
+  background-color: rgba(255, 121, 64, 0.9);
+  position: relative;
+  padding: 1rem 0.75rem 1rem 1rem;
+  color: #fff;
+  z-index: 1;
+  @include mq(tab) {
+    padding-left: 3%;
+    padding-right: 2rem;
+  }
+
+  .u-text--right {
+    position: relative;
+    padding-right: 1rem;
+  }
+
+  .u-text--right::before,
+  .u-text--right::after {
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    transform: rotate(45deg);
+    top: .735rem;
+  }
+
+  .u-text--right::before {
+    background-color: #fff;
+    right: 0;
+    transition: all .3s ease-in-out;
+  }
+
+  .u-text--right::after {
+    background-color: #FF8551;
+    right: .2rem;
+  }
+
+  .u-text--right:hover::before {
+    background-color: $sub-color;
+  }
+}
+
+.p-info--title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $base-color;
+  position: absolute;
+  top: -2.65rem;
+  left: 0;
+
+  @include mq(tab) {
+    font-size: 4rem;
+    top: -3.5rem;
+    left: 5%;
+  }
+}

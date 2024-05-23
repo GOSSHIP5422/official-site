@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+//  Animation
+//--------------------------------------------
+
+@keyframes fadeInleft {
+  0% {
+    opacity: 1;
+    transform: translateX(-150%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+}

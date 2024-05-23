@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+/*
+  Setlist
+-----------------------------------------------------*/
+.p-archiveContent--setlist {
+  width: 100%;
+
+  &--inner {
+    line-height: 2;
+    background-color: #fff;
+    color:$sub-color;
+    padding: 1rem 3rem;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    transform: translateX(5%);
+
+    @include mq(tab) {
+      transform: none;
+    }
+  }
+}

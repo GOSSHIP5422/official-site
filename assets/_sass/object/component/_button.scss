@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+
+.c-button {
+  display: block;
+  width: 200px;
+  border: 2px solid $main-color;
+  color: $main-color;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 1rem auto 2rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease;
+
+  &.--dark {
+    border: 1px solid #fff;
+    background-color: inherit;
+    color: #fff;
+  }
+
+  &.--left {
+    margin-left:0;
+  }
+
+  &.--right {
+    margin-right: 0;
+  }
+
+}
+
+.c-button:hover {
+  color: #fff;
+}
+
+.c-button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: $main-color;
+  transition: all 0.5s ease;
+}
+
+.c-button:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.c-button:active {
+  top: 2px;
+}
+
+.c-button.--dark::after {
+  background: #fff;
+}
+
+.c-button.--dark:hover {
+  color: $sub-color;
+}

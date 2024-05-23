@@ -1,0 +1,107 @@
+@charset 'UTF-8';
+/*
+  Hamburger button
+-----------------------------------------------------*/
+.p-hamburger {
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  padding: 0 8px;
+  z-index: 99;
+  transition: all .3s ease-in-out;
+
+  @include mq (tab) {
+    display: none;
+  }
+
+  &__line {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    width: 32px;
+    height: 2px;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+  }
+
+  &__line::before,
+  &__line::after {
+    content:'';
+    position: absolute;
+    display: block;
+    height: 100%;
+    background-color: #fff;
+    border-radius: inherit;
+    transition: all .5s ease-in-out;
+  }
+
+  &__line::before {
+    width: 100%;
+    top:-8px
+  }
+
+  &__line::after {
+    width: 80%;
+    top:8px
+  }
+
+  &.bg {
+    background-color: rgba(255, 249, 239, 0.8);
+    transition: all .3s ease-in-out;
+
+    .p-hamburger__line {
+      background-color: $main-color;
+      transition: all .3s ease-in-out;
+    }
+
+    .p-hamburger__line::before,
+    .p-hamburger__line::after {
+      background-color: $main-color;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .is-drawerActive & {
+    background-color: transparent;
+
+    &__line {
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        top: 0;
+        background-color: #fff;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+      &:after {
+        width: 100%;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.is-drawerActive .p-hamburger .p-hamburger__line {
+  background-color: transparent;
+
+  &:before,
+  &:after {
+    top: 0;
+    background-color: #fff;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {
+    width: 100%;
+    transform: rotate(45deg);
+  }
+}

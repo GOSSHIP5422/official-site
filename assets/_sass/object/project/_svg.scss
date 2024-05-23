@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+/*
+  SVG animation
+-----------------------------------------------------*/
+.ctl-2{
+  fill:none;
+  stroke:$main-color;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+}
+
+.fill{
+  fill-opacity: 0;
+  fill: $main-color;
+  transition: fill-opacity 0.4s ease-in;
+}
+.draw .fill{
+ fill-opacity: 1;
+}

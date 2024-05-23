@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+.p-join {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.p-join .l-container {
+  display: block;
+  @include mq(lap) {
+    width: 35%;
+    padding-left: 1rem;
+  }
+}
+
+.p-join .c-heading {
+  text-align: right;
+  margin-bottom: -.5rem;
+  transform: translateY(30%);
+
+  &.--m {
+    margin-left: -1rem;
+  }
+}
+
+.p-join--img {
+  width: 100%;
+
+  @include mq(lap) {
+    width: 60%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.p-join--txt {
+  text-align: right;
+
+  @include mq(lap) {
+    padding: 10vw 5% 0 1rem;
+  }
+}

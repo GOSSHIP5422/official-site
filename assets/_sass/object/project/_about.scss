@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+.p-about {
+  &--title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: $main-color;
+  }
+
+  &--text {
+    line-height: 2;
+    text-align: center;
+  }
+
+  &--svg {
+    width: 90%;
+    margin: 0 auto;
+
+    @include mq(tab) {
+      width: 60%;
+      max-width: 800px;
+    }
+  }
+}

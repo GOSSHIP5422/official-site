@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+/*
+  Header
+-----------------------------------------------------*/
+.p-header {
+  @include mq(tab) {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+  }
+}
+
+.p-header--title {
+  width: 40%;
+  height: 48px;
+  padding: .75rem;
+  transition: all .4s ease-in-out;
+  box-sizing: border-box;
+}
+
+.p-header--title.none {
+  opacity: 0;
+  z-index: -1;
+  transition: all .4s ease-in-out;
+}
+
+@include mq(tab) {
+  .p-header--title {
+    width: 200px;
+    height: 64px;
+    padding-top: .8rem;
+    padding-left: 16px;
+  }
+}
+
+.js-header-color {
+  background-color: $main-color;
+  transition: all .5s ease-in-out;
+
+  .p-gnav--menuItem a:hover {
+    color: $sub-color;
+  }
+}

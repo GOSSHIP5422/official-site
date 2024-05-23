@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+.c-heading {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: 'Lato',sans-serif;
+
+  @include mq(tab) {
+    font-size: 8rem;
+  }
+
+  &.--m {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: .8;
+
+    @include mq(tab) {
+      font-size: 5.5rem;
+      font-weight: bold;
+    }
+  }
+
+  &.--or {
+    color: $main-color;
+  }
+
+  &.--wh {
+    color: #fff;
+  }
+
+  &.--rotate {
+    transform: rotate(-3deg);
+    margin: 1rem 0 -2rem .55rem;
+  }
+}

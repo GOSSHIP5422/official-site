@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+/*
+  Text style
+-----------------------------------------------------*/
+.uppercase {
+  text-transform: uppercase;
+}
+
+.u-text--right {
+  text-align: right;
+}
+
+.u-text--center {
+  text-align: center;
+}
+
+.u-text--center-tab {
+  @include mq(tab) {
+    text-align: center;
+  }
+}
+
+.u-text--or {
+  color: $main-color;
+}
+
+.u-text--sub {
+  color: $sub-color;
+}
+
+.u-fz--075 {
+  font-size: .75rem;
+}
+
+.u-fz--15 {
+  font-size: 1.5rem;
+}
+
+.display-b {
+  display: block;
+}
+
+.u-hover--or a {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.u-hover--or a:hover {
+  color: $sub-color-2;
+}

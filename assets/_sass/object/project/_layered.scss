@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+/*
+  Layered
+-----------------------------------------------------*/
+.p-layered {
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+
+  &--img {
+    width: 90%;
+    position: absolute;
+    top: 4.75rem;
+    right: 0;
+    z-index: -1;
+
+    @include mq(tab) {
+      top: 6rem;
+      width: 70%;
+    }
+  }
+
+  &--img img {
+    height: 320px;
+    object-fit: cover;
+
+    @include mq(tab) {
+      width: 100%;
+      height: 50vw;
+    }
+
+    @include mq(lap) {
+      width: 100%;
+      height: 40vw;
+    }
+  }
+
+  &--txt {
+    background-color: rgba(230, 103, 49, 0.8);
+    padding: 3rem 2rem 2rem;
+    margin-top: 70vw;
+    width: 85%;
+    color: #fff;
+
+    @include mq(tab) {
+      margin-top: 38vw;
+      width: 70%;
+    }
+    @include mq(lap) {
+      margin-top: 32vw;
+      width: 50%;
+    }
+  }
+}

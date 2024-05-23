@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+/*
+  Blog
+-----------------------------------------------------*/
+.p-blog {
+  background-color: $main-color;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: #fff;
+
+  @include mq(tab) {
+    margin-top: 3rem;
+  }
+
+  .c-heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -.55rem;
+    margin-left: -.4rem;
+
+    @include mq(tab) {
+      top: -1.3rem;
+      left: -.2rem;
+    }
+  }
+
+  &--container {
+    @include mq(tab) {
+      width: 30%;
+    }
+  }
+
+  &--inner {
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem auto;
+
+    @include mq(tab) {
+      flex-direction: column-reverse;
+      margin-top: 5rem;
+    }
+  }
+
+  &--text {
+    width: 100%;
+    padding: .5rem 0 0 .5rem;
+  }
+
+  &---img {
+    width: 30%;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  &--category {
+    background-color: #fff;
+    color: $main-color;
+    font-size: .75rem;
+    padding: 3px 6px;
+  }
+}
